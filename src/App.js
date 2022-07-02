@@ -16,7 +16,7 @@ function App() {
 		<div className="App">
 			<NavBox />
 			<div className="login">
-				<div className="login__title">Plesase Sign-in</div>
+				<div className="login__title">Sign-in Page</div>
 				<IdBox getId={getId} />
 				<PwBox getPw={getPw} />
 				<div className="signin__buttons">
