@@ -4,7 +4,7 @@ const SelectMajor = () => {
 	return (
 		<div className="signup__major">
 			<select className="form-select" aria-label="Default select example">
-				<option value="selected">Select your major</option>
+				<option selected>Select your major</option>
 				<option value="36">컴퓨터공학부</option>
 				<option value="20">기계공학부</option>
 				<option value="61">전자정보통신공학부</option>

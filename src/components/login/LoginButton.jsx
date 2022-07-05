@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import isValidEmail from "../../functions/isValidEmail";
+import isValidPassword from "../../functions/isValidPassword";
 
 const LoginButton = ({ id, pw }) => {
 	const [countFail, setCountFail] = useState(0);
@@ -41,13 +43,3 @@ const LoginButton = ({ id, pw }) => {
 };
 
 export default LoginButton;
-
-function isValidEmail(email) {
-	const emailRegExp = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-	return email.match(emailRegExp);
-}
-function isValidPassword(password) {
-	const passwordRegExp =
-		/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&\(\)\\])[A-Za-z\d$@$!%*#?&\(\)\\]{8,}$/;
-	return password.match(passwordRegExp);
-}
