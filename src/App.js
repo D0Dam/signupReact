@@ -1,32 +1,19 @@
-import { useState } from "react";
+import React from "react";
+import LoginPage from "./routes/LoginPage";
 import "./App.css";
-import CatImg from "./components/CatImg";
-import IdBox from "./components/IdBox";
-import LoginButton from "./components/LoginButton";
-import LogoutButton from "./components/LogoutButton";
+import LogoutPage from "./routes/LogoutPage";
 import NavBox from "./components/NavBox";
-import PwBox from "./components/PwBox";
-
-function App() {
-	const [idRoot, setIdRoot] = useState("");
-	const [pwRoot, setPwRoot] = useState("");
-	const getId = (id) => setIdRoot(id);
-	const getPw = (pw) => setPwRoot(pw);
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+const App = () => {
 	return (
-		<div className="App">
+		<BrowserRouter>
 			<NavBox />
-			<div className="login">
-				<div className="login__title">Sign-in Page</div>
-				<IdBox getId={getId} />
-				<PwBox getPw={getPw} />
-				<div className="signin__buttons">
-					<LoginButton id={idRoot} pw={pwRoot} />
-					<LogoutButton />
-				</div>
-				<CatImg />
-			</div>
-		</div>
+			<Routes>
+				<Route path="/signupReact" element={<LoginPage />} />
+				<Route path="/signupReact2" element={<LogoutPage />} />
+			</Routes>
+		</BrowserRouter>
 	);
-}
+};
 
 export default App;

@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBox = () => {
 	return (
 		<div>
 			<ul className="nav nav-pills nav-fill">
 				<li className="nav-item nav__item">
-					<a className="nav-link signin-link" href="./mainLoginPage.html">
+					<Link className="nav-link signin-link" to="/signupReact">
 						loginPage
-					</a>
+					</Link>
 				</li>
 				<li className="nav-item nav__item">
-					<a className="nav-link signup-link" href="./mainSignUpPage.html">
+					<Link className="nav-link signup-link" to="/signupReact2">
 						signUpPage
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</div>
