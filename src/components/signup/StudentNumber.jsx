@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const StudentNumber = () => {
 	const [number, setNumber] = useState("");
 	const [major, setMajor] = useState("");
+	//이 함수 어덯게 처리할지 생가해봐야한다.
 	function snToMajor(e) {
 		setNumber(e.target.value);
 		const sn = number.replace(/[^0-9]/, "");
